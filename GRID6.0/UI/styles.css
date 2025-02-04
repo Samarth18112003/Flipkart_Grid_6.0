@@ -1,0 +1,146 @@
+/* Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+  }
+  
+  .navbar h1 {
+    margin: 0;
+  }
+  
+  .navbar nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 18px;
+  }
+  
+  /* Main Container */
+  .container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    gap: 20px;
+  }
+  
+  /* Camera Feed Section */
+  .camera-feed {
+    flex: 2;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .camera-feed img {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+  }
+  
+  .camera-feed button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .camera-feed button:hover {
+    background-color: #0056b3;
+  }
+  
+
+
+  
+  /* Product Details and Alerts Section */
+  .details-alerts {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Product Details */
+  .product-details {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-details span {
+    font-weight: bold;
+  }
+  
+  .product-status {
+    color: red;
+  }
+  
+  /* Alerts Section */
+  .alerts {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .alert {
+    background-color: #ff9800;
+    padding: 10px;
+    margin-top: 5px;
+    color: white;
+  }
+
+
+
+
+
+/* General Button Styles (for Dashboard and Reports) */
+button {
+    font-size: 18px;
+    color: #e1e1e1;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+}
+
+button:focus,
+button:hover {
+    color: #fff;
+}
+
+button:focus:after,
+button:hover:after {
+    width: 100%;
+    left: 0%;
+}
+
+button:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+}

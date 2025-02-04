@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flipkart Grid - Product Monitoring</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+  <script>
+    // Function to change the alert message
+    function changeAlertMessage() {
+      const alertsContainer = document.getElementById('alerts-container');
+      const alerts = document.getElementById('alerts');
+      setTimeout(() => {
+        alertsContainer.innerHTML = '<p>Good Apple</p>';
+        alerts.style.backgroundColor = 'green';
+      }, 3000);
+    }
+  </script>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <h1>Flipkart Grid - Product Monitoring</h1>
+    <nav>
+      <button id="dashboard-link">Dashboard</button>
+      <button id="reports-link">Reports</button>
+    </nav>
+  </header>
+
+  <!-- Main Container -->
+  <div class="container">
+    <!-- Left Section: Camera Feed -->
+    <div class="camera-feed">
+      <h2>Live Camera Feed</h2>
+      <img id="camera-image" 
+           src="https://via.placeholder.com/640x360?text=Feed+Available" 
+           alt="Camera Feed">
+      <button id="capture-btn" class="capture-button" onclick="changeAlertMessage()">Capture Image</button>
+    </div>
+
+    <!-- Right Section: Product Details and Alerts -->
+    <div class="details-alerts">
+      <!-- Product Details -->
+      <div class="product-details">
+        <h2>Product Details</h2>
+        <p><strong>Name:</strong> <span id="product-name">N/A</span></p>
+        <p><strong>MRP:</strong> <span id="product-mrp">N/A</span></p>
+        <p><strong>Expiry Date:</strong> <span id="product-expiry">N/A</span></p>
+        <p>
+          <strong>Status:</strong> 
+          <span id="product-status" class="unknown">Unknown</span>
+        </p>
+      </div>
+
+      <!-- Alerts Section -->
+      <div class="alerts" id="alerts">
+        <h2>Real-Time Alerts</h2>
+        <div id="alerts-container">
+          <p>No alerts</p>
+    </div>
+  </div>
+</body>
+</html>
